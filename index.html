@@ -79,7 +79,7 @@
                 radial-gradient(ellipse 70% 60% at 82% 18%, rgba(102, 204, 255, 0.18), transparent),
                 radial-gradient(ellipse 50% 50% at 10% 85%, rgba(102, 204, 255, 0.10), transparent),
                 linear-gradient(180deg, #F5FCFF 0%, #FFFFFF 100%);
-            padding: 96px 32px 88px;
+            padding: 80px 32px 80px;
         }
 
         .hero::after {
@@ -100,8 +100,8 @@
             position: relative;
             z-index: 1;
             display: grid;
-            grid-template-columns: 1fr 380px;
-            gap: 64px;
+            grid-template-columns: 1fr 360px;
+            gap: 72px;
             align-items: center;
         }
 
@@ -189,32 +189,27 @@
             background: var(--white);
             border: 1px solid var(--line);
             border-radius: var(--radius-lg);
-            padding: 0;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(42, 127, 191, 0.10);
+            box-shadow: 0 24px 70px rgba(42, 127, 191, 0.14);
         }
 
         .hero-card-visual {
-            height: 440px;
             position: relative;
-            overflow: hidden;
-            background: linear-gradient(145deg, #DDF3FF, #F0FAFF 70%);
+            background: linear-gradient(160deg, #DDF3FF, #F7FDFF 75%);
         }
 
         .hero-card-img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
+            height: auto;
             display: block;
         }
 
         .hero-card-visual .swatch-badge {
             position: absolute;
-            bottom: 16px;
-            right: 16px;
+            bottom: 14px;
+            right: 14px;
             z-index: 2;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.92);
             border-radius: 999px;
             padding: 5px 12px;
             font-size: 11px;
@@ -236,14 +231,14 @@
         }
 
         .hero-card-body {
-            padding: 22px 24px 26px;
+            padding: 18px 22px 22px;
         }
 
         .hero-card-body dl {
             display: grid;
             grid-template-columns: auto 1fr;
-            gap: 10px 20px;
-            font-size: 13.5px;
+            gap: 9px 18px;
+            font-size: 13px;
         }
 
         .hero-card-body dt {
@@ -356,13 +351,15 @@
         }
 
         .work-card {
+            display: block;
             border: 1px solid var(--line);
             border-radius: var(--radius-md);
-            padding: 26px 24px 24px;
+            padding: 22px 22px 20px;
             background: var(--white);
             transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
             position: relative;
             overflow: hidden;
+            color: inherit;
         }
 
         .work-card::before {
@@ -378,13 +375,20 @@
         }
 
         .work-card:hover {
-            border-color: rgba(102, 204, 255, 0.5);
-            box-shadow: 0 10px 30px rgba(102, 204, 255, 0.12);
+            border-color: rgba(102, 204, 255, 0.55);
+            box-shadow: 0 12px 32px rgba(102, 204, 255, 0.14);
             transform: translateY(-2px);
         }
 
         .work-card:hover::before {
             opacity: 1;
+        }
+
+        .work-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
         }
 
         .work-card .tag {
@@ -393,15 +397,21 @@
             letter-spacing: 0.1em;
             color: var(--tianyi-deep);
             text-transform: uppercase;
-            margin-bottom: 12px;
         }
 
         .work-card h3 {
             font-size: 19px;
             font-weight: 700;
             letter-spacing: 0.02em;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             color: var(--ink);
+        }
+
+        .work-card .author {
+            font-size: 12px;
+            color: var(--tianyi-deep);
+            font-weight: 500;
+            margin-bottom: 10px;
         }
 
         .work-card p {
@@ -410,11 +420,37 @@
             line-height: 1.7;
         }
 
+        .works-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
         .works-note {
-            margin-top: 28px;
             font-size: 13px;
             color: var(--ink-muted);
-            text-align: right;
+        }
+
+        .btn-bili {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--tianyi-blue);
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 600;
+            padding: 12px 26px;
+            border-radius: 999px;
+            box-shadow: 0 8px 24px rgba(102, 204, 255, 0.35);
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-bili:hover {
+            background: var(--tianyi-deep);
+            transform: translateY(-1px);
         }
 
         .timeline {
@@ -591,7 +627,8 @@
             }
 
             .hero-card {
-                max-width: 420px;
+                max-width: 360px;
+                margin: 0 auto;
             }
 
             .profile-grid {
@@ -619,7 +656,7 @@
             }
 
             .hero {
-                padding: 64px 20px 56px;
+                padding: 56px 20px 64px;
             }
 
             .section {
@@ -639,8 +676,8 @@
                 padding: 28px 24px;
             }
 
-            .hero-card-visual {
-                height: 360px;
+            .hero-card {
+                max-width: 320px;
             }
         }
     </style>
@@ -690,8 +727,6 @@
                         <dd>天依蓝 #66CCFF</dd>
                         <dt>音之精灵</dt>
                         <dd>天钿</dd>
-                        <dt>乐器</dt>
-                        <dd>麦克风</dd>
                         <dt>所属</dt>
                         <dd>Vsinger</dd>
                         <dt>身份</dt>
@@ -737,38 +772,83 @@
             <h2>代表作品</h2>
         </div>
         <div class="works-grid">
-            <div class="work-card">
-                <div class="tag">神话曲</div>
+            <a class="work-card" href="https://www.bilibili.com/video/BV1zs411S7sz/" target="_blank" rel="noopener">
+                <div class="work-top">
+                    <span class="tag">神话曲</span>
+                </div>
                 <h3>普通 DISCO</h3>
+                <div class="author">词曲 / 编曲：ilem</div>
                 <p>第一首 VOCALOID 中文神话曲，在 B 站播放量超过千万，标志着中文虚拟歌手创作生态的爆发。</p>
-            </div>
-            <div class="work-card">
-                <div class="tag">经典曲目</div>
+            </a>
+            <a class="work-card" href="https://www.bilibili.com/video/BV1sx411k7ug/" target="_blank" rel="noopener">
+                <div class="work-top">
+                    <span class="tag">经典曲目</span>
+                </div>
                 <h3>达拉崩吧</h3>
+                <div class="author">词曲 / 编曲：ilem</div>
                 <p>火遍全网的“烫嘴”神曲，以极快的语速和叙事性成为洛天依最具辨识度的舞台作品之一。</p>
-            </div>
-            <div class="work-card">
-                <div class="tag">国风代表</div>
+            </a>
+            <a class="work-card" href="https://www.bilibili.com/video/BV1fx411A7hz/" target="_blank" rel="noopener">
+                <div class="work-top">
+                    <span class="tag">国风代表</span>
+                </div>
                 <h3>权御天下</h3>
+                <div class="author">作词：ST / 作曲·编曲：乌龟Sui</div>
                 <p>以三国为背景的国风燃曲，展现了洛天依在宏大叙事与强烈节奏中的声音表现力。</p>
-            </div>
-            <div class="work-card">
-                <div class="tag">经典曲目</div>
+            </a>
+            <a class="work-card" href="https://www.bilibili.com/video/BV1es41127Fd/" target="_blank" rel="noopener">
+                <div class="work-top">
+                    <span class="tag">经典曲目</span>
+                </div>
                 <h3>霜雪千年</h3>
+                <div class="author">词曲 / 调校：COP</div>
                 <p>悠远清冷的国风旋律，是洛天依早期极具代表性的抒情作品之一。</p>
-            </div>
-            <div class="work-card">
-                <div class="tag">卫视舞台</div>
+            </a>
+            <a class="work-card" href="https://www.bilibili.com/video/BV1es41197ai/" target="_blank" rel="noopener">
+                <div class="work-top">
+                    <span class="tag">国风燃曲</span>
+                </div>
+                <h3>九九八十一</h3>
+                <div class="author">作词：邪叫教主 / 作曲·编曲：乌龟Sui</div>
+                <p>以《西游记》为灵感的高燃国风作品，节奏紧凑、气势磅礴，是圈内传唱度极高的经典。</p>
+            </a>
+            <a class="work-card" href="https://www.bilibili.com/video/BV1Jx411F7tf/" target="_blank" rel="noopener">
+                <div class="work-top">
+                    <span class="tag">早期经典</span>
+                </div>
+                <h3>千年食谱颂</h3>
+                <div class="author">词曲 / 编曲：H.K.君</div>
+                <p>把中华美食写进歌词的轻松小品，是洛天依早期最深入人心的作品之一。</p>
+            </a>
+            <a class="work-card" href="https://www.bilibili.com/video/BV1Bfjq6LEDi/" target="_blank" rel="noopener">
+                <div class="work-top">
+                    <span class="tag">可爱向</span>
+                </div>
+                <h3>人是猫</h3>
+                <div class="author">词曲 / 编曲：张卡斯</div>
+                <p>以猫的视角写成的小品，旋律轻快、歌词俏皮，是洛天依作品中少见的治愈系萌曲。</p>
+            </a>
+            <a class="work-card" href="https://www.bilibili.com/video/BV1vx411F7Ey/" target="_blank" rel="noopener">
+                <div class="work-top">
+                    <span class="tag">早期经典</span>
+                </div>
+                <h3>三月雨</h3>
+                <div class="author">作词：圣月樱泪 / 作曲·编曲：Wing翼</div>
+                <p>洛天依早期最具代表性的抒情曲之一，旋律细腻，情绪层层递进。</p>
+            </a>
+            <a class="work-card" href="https://www.bilibili.com/video/BV15s41127yg/" target="_blank" rel="noopener">
+                <div class="work-top">
+                    <span class="tag">卫视舞台</span>
+                </div>
                 <h3>花儿纳吉</h3>
-                <p>与杨钰莹在湖南卫视小年夜春晚合作演唱，是洛天依走向大众视野的重要舞台。</p>
-            </div>
-            <div class="work-card">
-                <div class="tag">原创专辑</div>
-                <h3>无尽蓝</h3>
-                <p>2022 年发行的原创数字专辑，收录《热带夜》《万能处方》《免费主义》等曲目，以蓝色为概念贯穿始终。</p>
-            </div>
+                <div class="author">词曲 / 编曲：ilem（2016 卫视春晚与杨钰莹合作演唱）</div>
+                <p>2016 年登上湖南卫视小年夜春晚，是洛天依走向大众视野的重要舞台。</p>
+            </a>
         </div>
-        <p class="works-note">* 以上仅为部分代表作品，截至 2025 年，洛天依的原创歌曲数量已超过一万首。</p>
+        <div class="works-footer">
+            <p class="works-note">* 以上仅为部分代表作品，截至 2025 年，洛天依的原创歌曲数量已超过一万首。</p>
+            <a class="btn-bili" href="https://search.bilibili.com/all?keyword=洛天依" target="_blank" rel="noopener">在 Bilibili 收听更多 ↗</a>
+        </div>
     </section>
 
     <section class="section" id="engine">
